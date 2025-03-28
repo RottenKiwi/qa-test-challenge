@@ -10,7 +10,9 @@
   - ✅ Most text is correct.  
   - ❌ One typo found ("condicions" instead of "conditions").  
   - ❌ One "Opt In" button text is different from the others.  
-- **Evidence:** ![Missing images](https://i.ibb.co/NdR40r8V/missing-img.png) ![Incorrect texts](https://i.ibb.co/nMwZ12Hv/Incorrect-text.png)  
+- **Evidence:** 
+![Missing images](https://i.ibb.co/NdR40r8V/missing-img.png)
+![Incorrect texts](https://i.ibb.co/nMwZ12Hv/Incorrect-text.png)  
 
 ### ✅ Scenario 2: Check Responsive Design for Mobile  
 - **Expected:** The promotions page should adapt properly to mobile screens.  

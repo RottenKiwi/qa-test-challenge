@@ -18,7 +18,7 @@
   - ✅ Page layout adjusts correctly.  
   - ✅ Sorting works correctly.  
   - ❌ Some images are missing (See Scenario 1 validation).  
-- **Evidence:** ![Missing images](https://imgur.com/a/5NNYJwF)    
+- **Evidence:** ![Missing images](https://i.ibb.co/MyDLV0qT/missing-img-mobile.png)    
 
 ## **2️⃣ General Promotion Page `/promotions/230301_mar23_ca_to_rfs`**  
 

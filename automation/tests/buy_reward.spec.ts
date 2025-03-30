@@ -1,50 +1,45 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/loginModal'; // Import LoginModal class
-import { ShopPage } from '../pages/shopPage'; // Import ShopPage class
-import configData from '../config.json';
+import { ShopPage } from '../pages/shopPage';
+import { LoginPage } from '../pages/loginModal';
+import * as helper from '../helpers/helpers'; // Import all helpers
 
 test('User can buy a reward from the shop after logging in', async ({ page }) => {
     const loginModal = new LoginPage(page);
     const shopPage = new ShopPage(page);
 
-    // Step 1: Navigate to the page and log in
-    await loginModal.navigate();
-    await loginModal.login();
+    // Step 1: Login using the helper function
+    await helper.login(page, loginModal);
 
-    // Step 2: Validate login by checking for the welcome message
-    await loginModal.validateLoginSuccess();
+    // Step 2: Navigate to the rewards page using the helper function
+    await helper.goToRewardsPage(page);
 
-    // Step 3: Navigate to the rewards page to check the current rewards
-    await shopPage.goToRewardsPage(); // Go to the rewards page
-
-    // Step 4: Fetch and log the number of rewards
+    // Step 3: Fetch and log the number of rewards before purchase
     const rewardCountBefore = await shopPage.getRewardCount();
     console.log(`Rewards count before purchase: ${rewardCountBefore}`);
 
-    // Step 5: Open the menu again and navigate to the shop
-    await shopPage.openMenu(); // Open the menu
-    await shopPage.goToShop(); // Go to the shop
+    // Step 4: Go to the shop using the helper function
+    await helper.goToShop(page, shopPage);
 
-    // Step 6: Wait for the balance to be visible and greater than 1
+    // Step 5: Wait for the balance to be visible and greater than 1
     await shopPage.waitForBalance();
 
-    // Step 7: Wait for the shop items to appear
+    // Step 6: Wait for the shop items to appear
     await shopPage.waitForShopItems();
 
-    // Step 8: Add the reward to the cart and click the "buy" button
+    // Step 7: Add the reward to the cart and click the "buy" button
     await shopPage.buyReward();
 
+    // Step 8: Validate the buy modal
     await shopPage.validateBuyModal();
 
+    // Step 9: Confirm the purchase
     await shopPage.confirmPurchase();
 
-    // Step 9: Optionally, verify the updated reward count after the purchase
-    await shopPage.goToRewardsPage(); // Go back to the rewards page
+    // Step 10: Verify the updated reward count after the purchase
+    await helper.goToRewardsPage(page);
     const rewardCountAfter = await shopPage.getRewardCount();
     console.log(`Rewards count after purchase: ${rewardCountAfter}`);
 
-    // Step 10: Ensure that the reward count has increased by 1
+    // Step 11: Ensure that the reward count has increased by 1
     expect(rewardCountAfter).toBe(rewardCountBefore + 1);
-
-
 });

@@ -1,1 +1,15 @@
-##
+# Node.js
+automation/node_modules/
+automation/package-lock.json
+
+# VS Code settings
+.vscode/
+
+# Playwright Trace logs and artifacts
+automation/test-results/
+
+# TypeScript
+automation/*.tsbuildinfo
+
+# MacOS system files
+.DS_Store

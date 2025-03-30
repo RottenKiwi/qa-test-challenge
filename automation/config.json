@@ -1,0 +1,11 @@
+{
+    "baseUrl": "https://qatesting-wand-stg.cpe.gigmagic.io/en/",
+    "authCredentials": {
+        "username": "qatesting",
+        "password": "qatesting_gig"
+    },
+    "userCredentials": {
+        "username": "qatest260011@gig.com",
+        "password": "Testeri85!"
+    }
+}

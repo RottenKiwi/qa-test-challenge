@@ -28,7 +28,7 @@ async function runTests() {
     }
 
     // Step 2: Ask the user to select a browser
-    const browsers = ['chromium', 'firefox', 'webkit'];
+    const browsers = ['chromium', 'firefox'];
     console.log('Select a browser to run the test:');
     browsers.forEach((browser, index) => {
         console.log(`${index + 1}. ${browser}`);

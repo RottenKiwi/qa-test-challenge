@@ -7,7 +7,7 @@ automation/package-lock.json
 
 # Playwright Trace logs and artifacts
 automation/test-results/
-
+automation/playwright-report/
 # TypeScript
 automation/*.tsbuildinfo
 

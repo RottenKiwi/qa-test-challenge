@@ -18,7 +18,7 @@ test('User can buy a reward from the shop after logging in', async ({ page }) =>
     console.log(`Rewards count before purchase: ${rewardCountBefore}`);
 
     // Step 4: Go to the shop using the helper function
-    await helper.goToShop(page, shopPage);
+    await helper.goToShopPage(page, shopPage);
 
     // Step 5: Wait for the balance to be visible and greater than 1
     await shopPage.waitForBalance();

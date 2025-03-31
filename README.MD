@@ -9,29 +9,31 @@ The project is organized into two main folders:
 - **`automation/`**: Contains all the automated test scripts for end-to-end testing.
 - **`exploratory-testing/`**: Contains findings from the exploratory testing task.
 
-.
-├── README.MD                         # Project overview, setup instructions, and other important details
-├── automation                         # Contains the automation scripts and configuration for Playwright testing
-│   ├── README.md                      # Automation-specific documentation, explaining the structure, setup, and usage of the automation scripts
-│   ├── config.json                    # Configuration file for automation, containing test data (e.g., login credentials)
-│   ├── helpers                        # Folder for reusable helper functions that simplify automation tasks
-│   │   └── helpers.ts                 # Helper functions (e.g., opening menus, logging in, navigating pages) for automation scripts
-│   ├── package.json                   # Node.js dependencies and scripts related to automation
-│   ├── pages                          # Folder containing Page Object Model (POM) files for different pages in the application
-│   │   ├── accountPage.ts             # Page object for handling actions related to the account page
-│   │   ├── loginModal.ts              # Page object for handling login functionality and authentication
-│   │   └── shopPage.ts                # Page object for handling actions on the shop page
-│   ├── playwright.config.ts           # Playwright configuration file, setting up test environment and browser options
-│   ├── runTests.ts                    # Entry point for executing the Playwright tests
-│   ├── tests                          # Folder for test scripts that test different features of the application
-│   │   ├── buy_reward.spec.ts         # Test script for buying a reward and verifying balance
-│   │   ├── login.spec.ts              # Test script for verifying the login functionality
-│   │   └── set_wager_limit.spec.ts    # Test script for setting and verifying wager limits
-│   └── tsconfig.json                  # TypeScript configuration file, specifying compiler options for the project
-└── exploratory-testing                # Folder containing exploratory testing findings and documentation
-    ├── README.md                      # Documentation for exploratory testing, explaining the testing approach, tools used, and structure of findings
-    └── findings.md                    # Detailed insights and observations from exploratory testing of the promotions section, including bugs, inconsistencies, and suggestions for improvement
 
+
+### automation/
+
+- **README.md**: Documentation specific to the automation setup and how to run the tests.
+- **config.json**: Configuration file for test data, such as login credentials.
+- **helpers/**: Folder for reusable helper functions that simplify automation tasks.
+  - **helpers.ts**: Contains reusable helper functions for actions such as opening menus, logging in, and navigating to different pages.
+- **package.json**: Node.js dependencies and scripts related to automation.
+- **pages/**: Folder containing Page Object Model (POM) files for different pages in the application.
+  - **accountPage.ts**: Handles actions related to the account page.
+  - **loginModal.ts**: Handles user login and authentication.
+  - **shopPage.ts**: Handles actions on the shop page.
+- **playwright.config.ts**: Playwright configuration file, setting up the test environment and browser options.
+- **runTests.ts**: Entry point for executing the Playwright tests.
+- **tests/**: Folder for test scripts that test different features of the application.
+  - **buy_reward.spec.ts**: Test script for buying a reward and verifying balance.
+  - **login.spec.ts**: Test script for verifying the login functionality.
+  - **set_wager_limit.spec.ts**: Test script for setting and verifying wager limits.
+- **tsconfig.json**: TypeScript configuration file, specifying compiler options for the project.
+
+### exploratory-testing/
+
+- **README.md**: Documentation for exploratory testing, explaining the testing approach, tools used, and structure of findings.
+- **findings.md**: Detailed insights and observations from exploratory testing of the promotions section, including bugs, inconsistencies, and suggestions for improvement.
 
 ---
 

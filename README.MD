@@ -9,25 +9,27 @@ The project is organized into two main folders:
 - **`automation/`**: Contains all the automated test scripts for end-to-end testing.
 - **`exploratory-testing/`**: Contains findings from the exploratory testing task.
 
-├── README.MD # Project overview and setup instructions 
+
+├── README.md                        # Project overview and setup instructions 
 ├── automation
-│   ├── README.md # Automation-specific documentation
-│   ├── config.json # Configuration for automation scripts
+│   ├── README.md                    # Automation-specific documentation
+│   ├── config.json                  # Configuration for automation scripts
 │   ├── helpers
-│   │   └── helpers.ts # Helper functions for automation
+│   │   └── helpers.ts               # Helper functions for automation
 │   ├── pages
-│   │   ├── accountPage.ts # Page object for the account page
-│   │   ├── loginModal.ts # Page object for the login modal
-│   │   └── shopPage.ts # Page object for the shop page
-│   ├── playwright.config.ts # Playwright configuration
-│   ├── runTests.ts # Entry point for running the tests
+│   │   ├── accountPage.ts           # Page object for the account page
+│   │   ├── loginModal.ts            # Page object for the login modal
+│   │   └── shopPage.ts              # Page object for the shop page
+│   ├── playwright.config.ts         # Playwright configuration
+│   ├── runTests.ts                  # Entry point for running the tests
 │   ├── tests
-│   │   ├── buy_reward.spec.ts # Test for buying a reward
-│   │   ├── login.spec.ts # Test for login functionality
-│   │   └── set_wager_limit.spec.ts # Test for setting wager limit
-│   └── tsconfig.json # TypeScript configuration
+│   │   ├── buy_reward.spec.ts       # Test for buying a reward
+│   │   ├── login.spec.ts            # Test for login functionality
+│   │   └── set_wager_limit.spec.ts  # Test for setting wager limit
+│   └── tsconfig.json                # TypeScript configuration
 └── exploratory-testing
-    └── findings.md indings.md # Document for exploratory testing insights
+    └── findings.md       
+    └── README.md             # Document for exploratory testing insights 
 
 
 ---

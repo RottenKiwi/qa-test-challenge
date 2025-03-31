@@ -9,27 +9,28 @@ The project is organized into two main folders:
 - **`automation/`**: Contains all the automated test scripts for end-to-end testing.
 - **`exploratory-testing/`**: Contains findings from the exploratory testing task.
 
-
-├── README.md                        # Project overview and setup instructions 
-├── automation
-│   ├── README.md                    # Automation-specific documentation
-│   ├── config.json                  # Configuration for automation scripts
-│   ├── helpers
-│   │   └── helpers.ts               # Helper functions for automation
-│   ├── pages
-│   │   ├── accountPage.ts           # Page object for the account page
-│   │   ├── loginModal.ts            # Page object for the login modal
-│   │   └── shopPage.ts              # Page object for the shop page
-│   ├── playwright.config.ts         # Playwright configuration
-│   ├── runTests.ts                  # Entry point for running the tests
-│   ├── tests
-│   │   ├── buy_reward.spec.ts       # Test for buying a reward
-│   │   ├── login.spec.ts            # Test for login functionality
-│   │   └── set_wager_limit.spec.ts  # Test for setting wager limit
-│   └── tsconfig.json                # TypeScript configuration
-└── exploratory-testing
-    └── findings.md       
-    └── README.md             # Document for exploratory testing insights 
+.
+├── README.MD                         # Project overview, setup instructions, and other important details
+├── automation                         # Contains the automation scripts and configuration for Playwright testing
+│   ├── README.md                      # Automation-specific documentation, explaining the structure, setup, and usage of the automation scripts
+│   ├── config.json                    # Configuration file for automation, containing test data (e.g., login credentials)
+│   ├── helpers                        # Folder for reusable helper functions that simplify automation tasks
+│   │   └── helpers.ts                 # Helper functions (e.g., opening menus, logging in, navigating pages) for automation scripts
+│   ├── package.json                   # Node.js dependencies and scripts related to automation
+│   ├── pages                          # Folder containing Page Object Model (POM) files for different pages in the application
+│   │   ├── accountPage.ts             # Page object for handling actions related to the account page
+│   │   ├── loginModal.ts              # Page object for handling login functionality and authentication
+│   │   └── shopPage.ts                # Page object for handling actions on the shop page
+│   ├── playwright.config.ts           # Playwright configuration file, setting up test environment and browser options
+│   ├── runTests.ts                    # Entry point for executing the Playwright tests
+│   ├── tests                          # Folder for test scripts that test different features of the application
+│   │   ├── buy_reward.spec.ts         # Test script for buying a reward and verifying balance
+│   │   ├── login.spec.ts              # Test script for verifying the login functionality
+│   │   └── set_wager_limit.spec.ts    # Test script for setting and verifying wager limits
+│   └── tsconfig.json                  # TypeScript configuration file, specifying compiler options for the project
+└── exploratory-testing                # Folder containing exploratory testing findings and documentation
+    ├── README.md                      # Documentation for exploratory testing, explaining the testing approach, tools used, and structure of findings
+    └── findings.md                    # Detailed insights and observations from exploratory testing of the promotions section, including bugs, inconsistencies, and suggestions for improvement
 
 
 ---
